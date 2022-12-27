@@ -4,9 +4,9 @@ INPUTS:-
 1.0 Text -> covered
 2.0 Numeric -> covered
 3.0 Password -> covered
-4.0 Slider
-5.0 Date
-6.0 Radio Button
+4.0 Slider -> covered
+5.0 Date -> covered
+6.0 Radio Button -> covered
 7.0 Select input
 8.0 Checkbox
 9.0 File
