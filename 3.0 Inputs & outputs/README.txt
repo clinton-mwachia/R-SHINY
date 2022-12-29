@@ -13,13 +13,13 @@ INPUTS:-
 6.0 Radio Button -> covered
 7.0 Select input -> covered
 8.0 Checkbox -> covered
-9.0 File
+9.0 File -> covered
 
 OUTPUTS: -
 1.0 Text Output -> covered
-2.0 Data Table -> covered
+2.0 Data Table
 3.0 Plot Output -> covered
-4.0 Table Output -> covered
+4.0 Table Output
 5.0 Downloads -> covered
 6.0 Verbatim text Output -> covered
 
