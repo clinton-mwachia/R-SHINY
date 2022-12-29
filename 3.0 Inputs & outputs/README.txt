@@ -12,7 +12,6 @@ INPUTS:-
 7.0 Select input -> covered
 8.0 Checkbox -> covered
 9.0 File
-10.0 Action Button
 
 OUTPUTS: -
 1.0 Text Output -> covered
