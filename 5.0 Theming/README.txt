@@ -6,11 +6,9 @@ THE CODE IS WELL COMMENTED.
 
 WE WILL COVER THE FOLLOWING:-
 1. Bootswatch theming. -> covered
-2. Custom theming.
-3. Real time theming.
+2. Custom theming. -> covered
+3. Real time theming. -> covered
 4. Dark/Light mode theming.
-
-WE WILL USE THE CODE FROM BOOTSWATCH THEMING.
 
 REFERENCES:-
 SHINY R DOCUMENTATION
