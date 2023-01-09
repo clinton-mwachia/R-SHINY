@@ -1,31 +1,34 @@
 library(shiny)
 library(bslib)
 
-# lets add dark mode
+# lets add dark mode to the app
 
-# you can also add more options as we have done in previous videos
+# you can try customizing the themes and plots
 
 # thanks for watching.
 
-light <- bs_theme()
-dark <- bs_theme(bg = "black", fg="white", primary = "green")
+light <- bs_theme() # default theming
+dark <- bs_theme(bg = "black", fg = "white", primary = "green")
 
 ui <- fluidPage(
   theme = light,
-  titlePanel("Dark mode"),
-  # app layout
+  titlePanel("Theming - Dark Mode"),
+  # APP LAYOUT
   sidebarLayout(
+    # side bar
     sidebarPanel(
-      # numeric input
-      numericInput("num", "Enter num:", value = 30),
-      checkboxInput("Dark","Dark")
+      #numeric input
+      numericInput("num", "Enter Number:", value = 30),
+      # dark mode toggler
+      checkboxInput("Dark_mode","Dark_mode")
     ),
     mainPanel(
-      # display plot to user
-      fluidRow(
-        column(6, plotOutput("plot")),
-        column(6, tableOutput("table"))
-      )
+     fluidRow(
+       # display plot to user
+       column(6, plotOutput("plot")),
+       # display table
+       column(6, tableOutput("table"))
+     )
     )
   )
 )
@@ -33,16 +36,16 @@ ui <- fluidPage(
 server <- function(input, output, session) {
   # handle light and dark mode
   observe(session$setCurrentTheme(
-    if (isTRUE(input$Dark)) dark else light
+    if (isTRUE(input$Dark_mode)) dark else light
   ))
   # plot histogram
   output$plot <- renderPlot({
     hist(rnorm(input$num))
   })
   
-  # show table of data
+  # table
   output$table <- renderTable({
-    iris
+    head(iris, 10)
   })
 }
 
