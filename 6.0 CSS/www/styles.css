@@ -1,0 +1,12 @@
+body {
+  font-family: Ink Free;
+  border: 2px solid green;
+  margin: 6px;
+}
+
+h1 {
+  color: brown;
+  text-align: center;
+  font-size: 30px;
+  border-style: double;
+}
