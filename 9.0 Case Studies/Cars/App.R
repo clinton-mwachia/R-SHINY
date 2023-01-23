@@ -39,7 +39,9 @@ ui <- navbarPage(
              # sidebar
              sidebarPanel(
                # car brand input
-               selectInput("brand", "Brand:", choices = mtcars$brand)
+               # Creating a placeholder value for easy user reference
+               # Adding Additional options of Select All and Deselect all along with unique cars from dataset
+               selectInput("brand", "Brand:", choices = c("Select a Car Type:"="","Select All","Deselect All",mtcars$names),multiple = TRUE)
              ),
              # main
              mainPanel(
@@ -54,6 +56,20 @@ ui <- navbarPage(
 )
 
 server <- function(input, output, session) {
+  
+  # This is to update the select input based on the SelectAll/DeselectAll options
+  # Creating logical flow based on choice selection to update the inputs dynamically from backend
+      observe({
+      if("Deselect All" %in% input$brand)
+        brand <- ""
+      else(if("Select All" %in% input$brand)
+        brand <- mtcars$names
+      else brand <- input$brand)
+      
+      updateSelectInput(session,"brand",selected=brand)
+    })
+  
+  
   # let us get the data and filter
   data <- reactive({
     mtcars %>%
