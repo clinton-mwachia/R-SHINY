@@ -10,6 +10,7 @@ library(plotly)
 # 2. time series of departure delay across time
 # 3. time series of arrival delay across time
 
+# CREATE A COPY OF THE ORIGINAL DATA
 flights_data <- data.table::copy(flights)
 
 # combine year month and day into column date and dropping the columns
