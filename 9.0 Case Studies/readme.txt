@@ -1,0 +1,1 @@
+the case studies has been moved to https://github.com/clinton-mwachia/shiny-use-cases-templates.git
