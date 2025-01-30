@@ -1,8 +1,14 @@
 ---
-title: "Untitled"
+title: "A report on analysis"
 author: "Clinton Moshe"
 date: "`r Sys.Date()`"
-output: html_document
+output:
+  pdf_document:
+    toc: true
+  word_document:
+    toc: true
+  html_document:
+    toc: true
 params:
   data: NA
 ---
@@ -11,7 +17,7 @@ params:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-# data summary
+## data summary
 
 ```{r}
 head(params$data)
