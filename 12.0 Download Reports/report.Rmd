@@ -11,13 +11,14 @@ output:
     toc: true
 params:
   data: NA
+  year: 2025
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## data summary
+## data summary for `r params$year`
 
 ```{r}
 head(params$data)
